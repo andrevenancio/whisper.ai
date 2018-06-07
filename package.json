@@ -1,0 +1,51 @@
+{
+    "name": "whisper.ai",
+    "version": "1.0.0",
+    "description": "chinese whispers through AI",
+    "repository": "git@github.com:andrevenancio/whisper.ai.git",
+    "license": "MIT",
+    "scripts": {
+        "dev:watch": "webpack --config webpack/development.js --watch",
+        "dev:devserver": "webpack-dev-server --config webpack/development.js",
+        "dev:express": "node server/development",
+        "build": "export NODE_ENV=production&&webpack --config webpack/production.js",
+        "start": "npm run dev:express",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^8.2.3",
+        "babel-loader": "^7.1.4",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "clean-webpack-plugin": "^0.1.19",
+        "copy-webpack-plugin": "^4.5.1",
+        "css-loader": "^0.28.11",
+        "eslint": "^4.19.1",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-loader": "^2.0.0",
+        "eslint-plugin-import": "^2.12.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-react": "^7.9.1",
+        "express": "^4.16.3",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.4.0",
+        "open-browser-webpack-plugin": "0.0.5",
+        "optimize-css-assets-webpack-plugin": "^4.0.2",
+        "prop-types": "^15.6.1",
+        "style-loader": "^0.21.0",
+        "uglifyjs-webpack-plugin": "^1.2.5",
+        "webpack": "^4.10.2",
+        "webpack-cli": "^3.0.3",
+        "webpack-command": "^0.2.0",
+        "webpack-dev-middleware": "^3.1.3",
+        "webpack-dev-server": "^3.1.4",
+        "webpack-hot-middleware": "^2.22.2"
+    },
+    "dependencies": {
+        "react": "^16.4.0",
+        "react-dom": "^16.4.0",
+        "react-router-dom": "^4.2.2"
+    }
+}

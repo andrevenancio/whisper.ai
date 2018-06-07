@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "key": "about",
+            "path": "/about"
+        },
+        {
+            "key": "work",
+            "path": "/work/:id"
+        }
+    ]
+}
