@@ -4,7 +4,9 @@
     "globals": {
         "__NODE_ENV__": true,
         "__VERSION__": true,
-        "document": true
+        "document": true,
+        "fetch": true,
+        "firebase": true
     },
     "rules": {
       "arrow-body-style": [0],
