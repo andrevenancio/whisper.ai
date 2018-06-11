@@ -42,7 +42,6 @@ class LoginComponent extends PureComponent {
 
     render() {
         const { currentUser } = this.props;
-        console.log('render login', currentUser);
         return (
             currentUser ?
                 this.renderLoggedIn(currentUser) :

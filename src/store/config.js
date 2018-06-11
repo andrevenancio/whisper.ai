@@ -27,14 +27,16 @@ export default (options = {}) => {
     store.runSaga = sagaMiddleware.run;
 
 
-    // console.log('MODULE HOT RELOAD', module.hot.accept);
-    if (module.hot) {
-        module.hot.accept('./reducers', () => {
-            const nextRootReducer = require('./reducers'); //eslint-disable-line
-            console.log('next reducer', nextRootReducer);
-            store.replaceReducer(nextRootReducer);
-        });
-    }
+    // TODO: fix this as reducers aren't on a /reducers/index file
+    // if (module.hot) {
+    //     console.log('hot', `${process.cwd()}src/store/reducers`);
+    //     const path = `${process.cwd()}src/store/reducers`;
+    //     module.hot.accept(path, () => {
+    //         const nextRootReducer = require(path); //eslint-disable-line
+    //         console.log('next reducer', nextRootReducer);
+    //         store.replaceReducer(nextRootReducer);
+    //     });
+    // }
 
     store.runSaga(rootSaga);
     return store;

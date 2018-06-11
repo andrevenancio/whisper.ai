@@ -41,7 +41,6 @@ class Application extends PureComponent {
     }
 
     render() {
-        console.log('render', this.props.ready);
         return (
             <Router>
                 { !this.props.ready ?
