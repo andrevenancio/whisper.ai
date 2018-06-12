@@ -44,6 +44,7 @@
         "webpack-hot-middleware": "^2.22.2"
     },
     "dependencies": {
+        "body-parser": "^1.18.3",
         "immutable": "^3.8.2",
         "immutable-devtools": "^0.1.3",
         "react": "^16.4.0",

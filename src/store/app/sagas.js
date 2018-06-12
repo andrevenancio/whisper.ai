@@ -3,7 +3,10 @@ import {
     takeLatest,
 } from 'redux-saga/effects';
 
-import { init } from '../../firebase/api';
+import {
+    init,
+    getRedirectResult,
+} from '../../firebase/api';
 
 import {
     APP_INIT,
@@ -21,8 +24,8 @@ function* sagaAppInit() {
     // init firebase SDK
     init(json.firebase);
 
-    // check if user is already logged in and saves value to store
-    yield firebase.auth().getRedirectResult();
+    // checks if user is already logged in
+    yield getRedirectResult();
     yield put({ type: USER_UPDATE, currentUser: firebase.auth().currentUser });
 
     // everything is loaded

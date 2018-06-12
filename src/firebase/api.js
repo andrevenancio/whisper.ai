@@ -3,12 +3,15 @@ let provider = null;
 export const init = (config) => {
     firebase.initializeApp(config);
     provider = new firebase.auth.TwitterAuthProvider();
-    // Also notice that you can retrieve the Twitter provider's OAuth token
-    // which can be used to fetch additional data using the Twitter APIs.
+};
+
+export const setPersistence = async () => {
+    return firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 };
 
 export const login = async () => {
     const response = await firebase.auth().signInWithPopup(provider);
+    console.log('login', response);
     return response;
 };
 
@@ -17,6 +20,18 @@ export const logout = async () => {
     return response;
 };
 
+export const getRedirectResult = async () => {
+    const response = await firebase.auth().getRedirectResult();
+    // firebase.auth().onAuthStateChanged((user) => {
+    //     console.log('STATE CHANGE', user);
+    // });
+    return response;
+};
+
 export const getUser = () => {
     return firebase.auth().currentUser;
+};
+
+export const getProvider = () => {
+    return provider;
 };

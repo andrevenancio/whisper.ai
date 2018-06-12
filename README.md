@@ -14,3 +14,18 @@ Chinese whispers through AI
 
 ## Production
 `npm run build && node server/production.js`
+
+
+
+## Steps
+- setup project                                                                 done
+- connect store                                                                 done
+- integrate with firebase login                                                 done
+- create REST Api to call Twitter API (search, post tweet, retrieve tween)      done
+- save into firebase DB                                                         
+- look into tensorflow.js                                                       
+- hire a designer                                                               
+- implement layout                                                              
+- test                                                                          
+- advertise                                                                     
+- submit to awards                                                              

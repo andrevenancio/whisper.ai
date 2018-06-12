@@ -2,11 +2,14 @@ const express = require('express');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
+// const API = require('./api.js');
 
 const config = require('../webpack/development.express.js');
 
 const app = express();
 const compiler = webpack(config);
+
+// API(app);
 
 app.use((req, res, next) => { if (!/(\.(?!html)\w+$|__webpack.*)/.test(req.url)) req.url = '/'; next(); });
 
