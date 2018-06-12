@@ -9,9 +9,7 @@ const USE_DEV_TOOLS = global.devToolsExtension;
 if (USE_DEV_TOOLS) installDevTools(Immutable);
 
 export default (options = {}) => {
-    const {
-        initialState = {},
-    } = options;
+    const { initialState = {} } = options;
 
     const middlewares = [];
 

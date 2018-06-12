@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 
 import config from './store/config';
 import { actionAppInit } from './store/app/actions';
-import { makeStateImmutable } from './store/utils';
 import Application from './app';
 
 import './style.css';
@@ -28,9 +27,7 @@ if (node !== 'production') {
     global.window.printVersion();
 }
 
-const store = config({
-    initialState: makeStateImmutable({}),
-});
+const store = config();
 
 render(
     <Provider store={store}>
