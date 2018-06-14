@@ -13,13 +13,12 @@ class FieldSearch extends PureComponent {
         data: [],
     }
 
-    handleAPISearch = async (value, count = 5) => {
-        const res = await fetch(`${this.props.api}?key=${value}&count=${count}`)
-            .then((response) => {
-                return response.json();
-            });
+    async handleAPISearch(value, count = 5) {
+        const response = await fetch(`${this.props.api}?key=${value}&count=${count}`);
+        const json = await response.json();
+
         this.setState({
-            data: res.data,
+            data: json.data,
         });
     }
 
@@ -36,20 +35,23 @@ class FieldSearch extends PureComponent {
 
     render() {
         return (
-            <div>
+            <div className="field-search">
                 <input
-                    placeholder="Search for..."
+                    placeholder="search for username"
                     ref={(e) => { this.search = e; }}
                     onChange={this.handleInputChange}
                 />
-                {this.state.data.map((result, index) => {
-                    return (
-                        <div key={`result-${index}`}>
-                            <img alt="" src={result.profile_image_url_https} />
-                            <p>{`@${result.screen_name}`}</p>
-                        </div>
-                    );
-                })}
+
+                <div className="field-search__suggestions">
+                    {this.state.data.map((result, index) => {
+                        return (
+                            <div key={`result-${index}`} className="field-search__suggestions__person">
+                                <img alt="" src={result.profile_image_url_https} />
+                                <p>{`@${result.screen_name}`}</p>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         );
     }

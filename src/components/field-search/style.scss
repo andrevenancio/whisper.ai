@@ -1,0 +1,26 @@
+.field-search {
+    position: relative;
+    padding: 20px;
+    background-color: red;
+
+    &__suggestions {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(100%);
+
+        &__person {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        img {
+            width: 40px;
+        }
+
+        img, p {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+}
