@@ -13,6 +13,7 @@ import { selectAppReady } from './store/app/selectors';
 import {
     About,
     Menu,
+    TestAPI,
 } from './components';
 
 class Application extends PureComponent {
@@ -34,6 +35,7 @@ class Application extends PureComponent {
                 <Switch>
                     <Route path="/" exact render={() => <h1>whispers.ai</h1>} />
                     <Route path="/about" component={About} />
+                    <Route path="/test-api" component={TestAPI} />
                     <Redirect path="*" to="/" />
                 </Switch>
             </div>

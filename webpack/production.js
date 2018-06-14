@@ -16,7 +16,7 @@ delete settings.devServer;
 settings.output.filename = 'js/[name].min.js';
 
 // rules
-settings.module.rules[0] = rules.css.production;
+settings.module.rules[0] = rules.scss.production;
 
 // optimization
 settings.optimization = {

@@ -32,7 +32,7 @@ module.exports = {
 
     module: {
         rules: [
-            rules.css.dev,
+            rules.scss.dev,
             rules.jsx,
         ],
     },

@@ -9,6 +9,7 @@ class Menu extends PureComponent {
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
+                <Link to="/test-api">Test API</Link>
                 <LoginComponent />
             </nav>
         );

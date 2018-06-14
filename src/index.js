@@ -6,7 +6,7 @@ import config from './store/config';
 import { actionAppInit } from './store/app/actions';
 import Application from './app';
 
-import './style.css';
+import './style.scss';
 
 const lib = 'color:#666;font-size:x-small;font-weight:bold;';
 const parameters = 'color:#777;font-size:x-small';

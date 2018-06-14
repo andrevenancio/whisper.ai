@@ -8,6 +8,7 @@
         "dev:watch": "webpack --config webpack/development.js --watch",
         "dev:devserver": "webpack-dev-server --config webpack/development.js",
         "dev:express": "node server/development",
+        "dev:api": "nodemon server/api/",
         "build": "export NODE_ENV=production&&webpack --config webpack/production.js",
         "start": "npm run dev:express",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,9 +32,11 @@
         "express": "^4.16.3",
         "html-webpack-plugin": "^3.2.0",
         "mini-css-extract-plugin": "^0.4.0",
+        "node-sass": "^4.9.0",
         "open-browser-webpack-plugin": "0.0.5",
         "optimize-css-assets-webpack-plugin": "^4.0.2",
         "prop-types": "^15.6.1",
+        "sass-loader": "^7.0.3",
         "style-loader": "^0.21.0",
         "uglifyjs-webpack-plugin": "^1.2.5",
         "webpack": "^4.12.0",
@@ -45,13 +48,16 @@
     },
     "dependencies": {
         "body-parser": "^1.18.3",
+        "cors": "^2.8.4",
         "immutable": "^3.8.2",
         "immutable-devtools": "^0.1.3",
+        "nodemon": "^1.17.5",
         "react": "^16.4.0",
         "react-dom": "^16.4.0",
         "react-redux": "^5.0.7",
         "react-router-dom": "^4.2.2",
         "redux": "^4.0.0",
-        "redux-saga": "^0.16.0"
+        "redux-saga": "^0.16.0",
+        "twit": "^2.2.10"
     }
 }
