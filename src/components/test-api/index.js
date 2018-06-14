@@ -10,11 +10,11 @@ class TestAPI extends PureComponent {
             .then((response) => {
                 return response.json();
             });
-        console.log('response', res.data);
         this.showServerResponse(res);
     }
 
     showServerResponse(response) {
+        console.log('Twitter response', response.data);
         const pretty = JSON.stringify(response, undefined, 4);
         this.response.value = pretty;
     }
