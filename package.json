@@ -10,7 +10,7 @@
         "dev:express": "node server/development",
         "dev:api": "nodemon server/api/",
         "build": "export NODE_ENV=production&&webpack --config webpack/production.js",
-        "start": "npm run dev:express",
+        "start": "concurrently --kill-others --names \"website,api\" -c \"black.bgWhite,black.bgWhite\" \"npm run dev:express\" \"npm run dev:api\"",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
@@ -21,6 +21,7 @@
         "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.24.1",
         "clean-webpack-plugin": "^0.1.19",
+        "concurrently": "^3.6.0",
         "copy-webpack-plugin": "^4.5.1",
         "css-loader": "^0.28.11",
         "eslint": "^4.19.1",
