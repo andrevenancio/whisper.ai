@@ -6,7 +6,6 @@ body {
 
 body {
     font-family: $font-main;
-    font-size: 14px;
     color: $color-font-main;
     background-color: $color-background-main;
 }
@@ -16,6 +15,13 @@ body {
     box-sizing: border-box;
 }
 
-a {
+
+h1, h2, h3, h4, h5 {
+    color: $color-font-main;
+    font-weight: bold;
+}
+
+p, a, button {
     color: $color-font-secondary;
+    font-weight: normal;
 }

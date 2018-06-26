@@ -11,7 +11,8 @@ import { connect } from 'react-redux';
 import { selectAppReady } from './store/app/selectors';
 
 import {
-    About,
+    Create,
+    Detail,
     Menu,
     TestAPI,
 } from './components';
@@ -30,11 +31,12 @@ class Application extends PureComponent {
 
     renderApp() {
         return (
-            <div>
+            <div className="container">
                 <Menu />
                 <Switch>
                     <Route path="/" exact render={() => <h1>whispers.ai</h1>} />
-                    <Route path="/about" component={About} />
+                    <Route path="/create" component={Create} />
+                    <Route path="/detail" component={Detail} />
                     <Route path="/test-api" component={TestAPI} />
                     <Redirect path="*" to="/" />
                 </Switch>

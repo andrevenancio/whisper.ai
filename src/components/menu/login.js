@@ -24,19 +24,19 @@ class LoginComponent extends PureComponent {
 
     renderLoggedIn(user) {
         return (
-            <span>
+            <div className="login">
                 <p>{user.displayName}</p>
                 <img alt="" src={user.photoURL} />
                 <button onClick={this.props.handleUserLogout}>Logout</button>
-            </span>
+            </div>
         );
     }
 
     renderNotLoggedIn() {
         return (
-            <span>
+            <div className="login">
                 <button onClick={this.props.handleUserLogin}>Login</button>
-            </span>
+            </div>
         );
     }
 

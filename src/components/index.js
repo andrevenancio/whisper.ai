@@ -1,5 +1,6 @@
 // routes
-import About from './about';
+import Create from './create';
+import Detail from './detail';
 import Menu from './menu';
 import TestAPI from './test-api';
 
@@ -7,7 +8,8 @@ import TestAPI from './test-api';
 import FieldSearch from './field-search';
 
 export {
-    About,
+    Create,
+    Detail,
     Menu,
     TestAPI,
     FieldSearch,

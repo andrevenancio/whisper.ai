@@ -1,7 +1,23 @@
+@import '../../styles/variables';
+
 .field-search {
     position: relative;
-    padding: 20px;
-    background-color: red;
+
+    input {
+        color: $color-font-main;
+        padding: 4px 8px;
+        background-color: $color-background-secondary;
+        border: 1px solid $color-line;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $color-line-focus;
+        }
+
+        &::placeholder {
+            color: $color-font-disabled;
+        }
+    }
 
     &__suggestions {
         position: absolute;

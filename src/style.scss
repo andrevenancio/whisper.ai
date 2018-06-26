@@ -1,3 +1,12 @@
 @import './styles/reset.scss';
 @import './styles/variables.scss';
 @import './styles/theme.scss';
+
+#app {
+    .container {
+        padding: 16px;
+        max-width: 1024px;
+        margin: 0 auto;
+        border: 1px dashed white;
+    }
+}

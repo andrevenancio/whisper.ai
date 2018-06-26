@@ -2,11 +2,13 @@ import React, { PureComponent } from 'react';
 import FieldSearch from '../field-search';
 import { SEARCH } from '../../constants';
 
-class About extends PureComponent {
+class Create extends PureComponent {
 
     render() {
         return (
             <span>
+                <h1>Create</h1>
+                <p>create your tweet here</p>
                 <FieldSearch
                     api={SEARCH}
                 />
@@ -15,4 +17,4 @@ class About extends PureComponent {
     }
 }
 
-export default About;
+export default Create;

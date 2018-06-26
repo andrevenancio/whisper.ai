@@ -22,11 +22,11 @@ function* sagaAppInit() {
     const json = yield response.json();
 
     // init firebase SDK
-    // init(json.firebase);
+    init(json.firebase);
 
     // checks if user is already logged in
-    // yield getRedirectResult();
-    // yield put({ type: USER_UPDATE, currentUser: firebase.auth().currentUser });
+    yield getRedirectResult();
+    yield put({ type: USER_UPDATE, currentUser: firebase.auth().currentUser });
 
     // everything is loaded
     yield put({ type: APP_READY, ready: true });
