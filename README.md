@@ -2,7 +2,7 @@
 Chinese whispers through AI
 
 <a href="https://github.com/andrevenancio/whisper.ai/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="licence"/></a>
-<a href="https://travis-ci.org/andrevenancio/whisper.ai"><img src="https://travis-ci.org/andrevenancio/whisper.ai.svg" alt="Travis Status"></a>
+<a href="https://travis-ci.com/andrevenancio/whisper.ai"><img src="https://travis-ci.com/andrevenancio/whisper.ai.svg" alt="Travis Status"></a>
 <a href="https://david-dm.org/andrevenancio/whisper.ai"><img src="https://david-dm.org/andrevenancio/whisper.ai.svg" alt="Dependency Status"></a>
 <a href="https://david-dm.org/andrevenancio/whisper.ai/?type=dev"><img src="https://david-dm.org/andrevenancio/whisper.ai/dev-status.svg" alt="devDependency Status"></a>
 
