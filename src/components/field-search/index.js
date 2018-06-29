@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-class FieldSearch extends PureComponent {
+export class FieldSearchComponent extends PureComponent {
 
     static propTypes = {
         api: PropTypes.string.isRequired,
@@ -56,5 +56,3 @@ class FieldSearch extends PureComponent {
         );
     }
 }
-
-export default FieldSearch;

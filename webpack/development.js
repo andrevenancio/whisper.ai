@@ -1,5 +1,4 @@
 const path = require('path');
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 const {
     PATH_DIST,
@@ -44,6 +43,5 @@ module.exports = {
         plugins.copy,
         plugins.nmp,
         plugins.hmp,
-        new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
     ],
 };

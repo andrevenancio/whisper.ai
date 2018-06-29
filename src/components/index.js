@@ -1,7 +1,4 @@
-import Menu from './menu';
-import FieldSearch from './field-search';
-
-export {
-    Menu,
-    FieldSearch,
-};
+export { MenuComponent } from './menu';
+export { FieldSearchComponent } from './field-search';
+export { SecureHoc } from './secure-hoc';
+export { CurrentUserComponent } from './current-user';

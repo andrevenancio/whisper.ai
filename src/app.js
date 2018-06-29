@@ -9,14 +9,42 @@ import {
 import { connect } from 'react-redux';
 
 import { selectAppReady } from './store/app/selectors';
+import { MenuComponent, SecureHoc } from './components';
+import { Home, Create, Detail } from './containers';
+import { PATHS } from './constants';
 
-import { Menu } from './components';
-import {
-    Home,
-    Create,
-    Detail,
-    TestAPI,
-} from './routes';
+const ROUTES = [
+    {
+        path: PATHS.HOME,
+        component: Home,
+        exact: true,
+    },
+    {
+        path: PATHS.CREATE,
+        component: Create,
+        exact: true,
+        secure: true,
+    },
+    {
+        path: PATHS.DETAIL,
+        component: Detail,
+        exact: true,
+    },
+];
+
+const render = (Component, props, options = { secure: false }) => {
+    if (options.secure) {
+        return (
+            <SecureHoc>
+                <Component {...props} />
+            </SecureHoc>
+        );
+    }
+
+    return (
+        <Component {...props} />
+    );
+};
 
 class Application extends PureComponent {
 
@@ -33,13 +61,22 @@ class Application extends PureComponent {
     renderApp() {
         return (
             <div className="container">
-                <Menu />
+                <MenuComponent />
                 <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/create" component={Create} />
-                    <Route path="/detail" component={Detail} />
-                    <Route path="/test-api" component={TestAPI} />
-                    <Redirect path="*" to="/" />
+                    {
+                        ROUTES.map((route, index) => {
+                            const { component, path, exact, secure } = route;
+                            return (
+                                <Route
+                                    key={index}
+                                    path={path}
+                                    exact={exact}
+                                    render={props => render(component, props, { secure })}
+                                />
+                            );
+                        })
+                    }
+                    <Redirect path={PATHS.ALL} to={PATHS.HOME} />
                 </Switch>
             </div>
         );

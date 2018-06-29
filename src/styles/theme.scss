@@ -22,12 +22,14 @@ body {
 h1, h2, h3, h4, h5 {
     color: $color-font-main;
     font-weight: bold;
-    border: 1px dashed white;
+    font-size: 16px;
+    padding: 16px 0;
 }
 
 p {
     color: $color-font-secondary;
     font-weight: normal;
+    padding: 8px 0;
 }
 
 a,
@@ -36,6 +38,7 @@ button {
     border: none;
     color: $color-font-main;
     cursor: pointer;
+    padding: 0;
     transition: color 0.2s ease-out;
 
     &:hover,

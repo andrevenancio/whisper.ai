@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.current-user {
+    &__details {
+        display: inline-flex;
+        align-items: center;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+}

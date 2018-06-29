@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import FieldSearch from '../../components/field-search';
+import { FieldSearchComponent } from '../../components';
 import { SEARCH } from '../../constants';
 
 class Create extends PureComponent {
@@ -9,7 +9,7 @@ class Create extends PureComponent {
             <span>
                 <h1>Create</h1>
                 <p>create your tweet here</p>
-                <FieldSearch
+                <FieldSearchComponent
                     api={SEARCH}
                 />
             </span>

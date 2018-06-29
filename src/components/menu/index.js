@@ -1,22 +1,20 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import LoginComponent from './login';
+import { PATHS } from '../../constants';
+import { CurrentUserComponent } from '../current-user';
 
 import './style.scss';
 
-class Menu extends PureComponent {
+export class MenuComponent extends Component {
     render() {
         return (
             <nav className="navigation">
-                <NavLink to="/" activeClassName="active">Home</NavLink>
-                <NavLink exact to="/create" activeClassName="active">Create</NavLink>
-                <NavLink exact to="/detail" activeClassName="active">Detail</NavLink>
-                <NavLink exact to="/test-api" activeClassName="active">Test API</NavLink>
-                <LoginComponent />
+                <NavLink exact to={PATHS.HOME} activeClassName="active">Home</NavLink>
+                <NavLink to={PATHS.CREATE} activeClassName="active">Create</NavLink>
+                <NavLink to={PATHS.DETAIL} activeClassName="active">Detail</NavLink>
+                <CurrentUserComponent />
             </nav>
         );
     }
 }
-
-export default Menu;

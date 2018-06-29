@@ -1,10 +1,12 @@
 .navigation {
-    position: relative;
-    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 48px;
 
     a {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 16px;
+        margin-right: 16px;
 
         &:first-child {
             margin-left: 0;
@@ -13,14 +15,5 @@
         &:last-child {
             margin-right: 0;
         }
-    }
-
-    .login {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
     }
 }
