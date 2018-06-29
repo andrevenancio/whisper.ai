@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import FieldSearch from '../field-search';
+import FieldSearch from '../../components/field-search';
 import { SEARCH } from '../../constants';
 
 class Create extends PureComponent {

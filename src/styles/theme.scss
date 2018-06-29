@@ -6,6 +6,7 @@ body {
 
 body {
     font-family: $font-main;
+    font-size: 11px;
     color: $color-font-main;
     background-color: $color-background-main;
 }
@@ -13,15 +14,32 @@ body {
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
 h1, h2, h3, h4, h5 {
     color: $color-font-main;
     font-weight: bold;
+    border: 1px dashed white;
 }
 
-p, a, button {
+p {
     color: $color-font-secondary;
     font-weight: normal;
+}
+
+a,
+button {
+    background-color: transparent;
+    border: none;
+    color: $color-font-main;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+
+    &:hover,
+    &.active {
+        color: red; // $color-font-secondary;
+    }
 }

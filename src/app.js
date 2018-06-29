@@ -10,12 +10,13 @@ import { connect } from 'react-redux';
 
 import { selectAppReady } from './store/app/selectors';
 
+import { Menu } from './components';
 import {
+    Home,
     Create,
     Detail,
-    Menu,
     TestAPI,
-} from './components';
+} from './routes';
 
 class Application extends PureComponent {
 
@@ -34,7 +35,7 @@ class Application extends PureComponent {
             <div className="container">
                 <Menu />
                 <Switch>
-                    <Route path="/" exact render={() => <h1>whispers.ai</h1>} />
+                    <Route path="/" exact component={Home} />
                     <Route path="/create" component={Create} />
                     <Route path="/detail" component={Detail} />
                     <Route path="/test-api" component={TestAPI} />

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import LoginComponent from './login';
 
@@ -9,10 +9,10 @@ class Menu extends PureComponent {
     render() {
         return (
             <nav className="navigation">
-                <Link to="/">Home</Link>
-                <Link to="/create">Create</Link>
-                <Link to="/detail">Detail</Link>
-                <Link to="/test-api">Test API</Link>
+                <NavLink to="/" activeClassName="active">Home</NavLink>
+                <NavLink exact to="/create" activeClassName="active">Create</NavLink>
+                <NavLink exact to="/detail" activeClassName="active">Detail</NavLink>
+                <NavLink exact to="/test-api" activeClassName="active">Test API</NavLink>
                 <LoginComponent />
             </nav>
         );

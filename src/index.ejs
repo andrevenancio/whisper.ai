@@ -6,19 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="mobile-web-app-capable" content="yes">
-<% if(__PRODUCTION__) { %>
-        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+        <% if(__PRODUCTION__) { %>
         <link href="/css/style.css" media="all" rel="stylesheet">
-<% } %>
+        <% } %>
     </head>
     <body>
         <div id="app"></div>
         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
-<% if(__PRODUCTION__){ %>
+        <% if(__PRODUCTION__){ %>
         <script src="/js/app.min.js"></script>
-<% } else{ %>
+        <% } else{ %>
         <script src="/js/app.js"></script>
-<% } %>
+        <% } %>
     </body>
 </html>
