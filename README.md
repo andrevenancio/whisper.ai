@@ -31,7 +31,7 @@ Chinese whispers through AI
 | create REST Api to call Twitter API (search, post tweet, retrieve tween) | done |
 | save into firebase DB | |
 | look into tensorflow.js | |
-| hire a designer | |
+| hire a designer | done |
 | implement layout | |
 | test | |
 | advertise | |
