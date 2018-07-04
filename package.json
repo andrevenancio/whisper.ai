@@ -10,7 +10,7 @@
         "dev:devserver": "webpack-dev-server --config webpack/development.js",
         "dev:express": "node server/development",
         "dev:api": "nodemon server/api/ -q",
-        "server:prd": "node ./server/index.js",
+        "server:prd": "node ./server/production.js",
         "build": "export NODE_ENV=production&&webpack --config webpack/production.js",
         "start": "concurrently --kill-others --names \"website,api\" -c \"black.bgWhite,black.bgWhite\" \"npm run dev:express\" \"npm run dev:api\"",
         "lint": "eslint src/**/*.js --quiet",
