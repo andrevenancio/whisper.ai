@@ -1,8 +1,8 @@
 {
-    "name": "whisper.ai",
+    "name": "whispers.ai",
     "version": "1.0.0",
-    "description": "chinese whispers through AI",
-    "repository": "git@github.com:andrevenancio/whisper.ai.git",
+    "description": "",
+    "repository": "git@github.com:andrevenancio/whispers.ai.git",
     "license": "MIT",
     "scripts": {
         "dev:watch": "webpack --config webpack/development.js --watch",
