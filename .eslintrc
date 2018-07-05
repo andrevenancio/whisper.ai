@@ -2,6 +2,7 @@
     "parser": "babel-eslint",
     "extends": "airbnb",
     "globals": {
+        "__API__": true,
         "__NODE_ENV__": true,
         "__VERSION__": true,
         "document": true,

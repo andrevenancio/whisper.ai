@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
+import { setApiBaseUrl } from './constants';
 import config from './store/config';
 import { actionAppInit } from './store/app/actions';
 import Application from './app';
@@ -22,6 +23,8 @@ global.window.printVersion = () => {
 
     console.log(...args);
 };
+
+setApiBaseUrl(__API__);
 
 if (node !== 'production') {
     global.window.printVersion();
