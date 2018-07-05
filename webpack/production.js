@@ -1,32 +1,45 @@
+const path = require('path');
 const plugins = require('./plugins');
 const rules = require('./rules');
-const settings = require('./development.js');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-// setting `mode` to production
-settings.mode = 'production';
+const {
+    PATH_DIST,
+    PATH_SOURCE,
+} = require('./webpack.config');
 
-// removing source maps from production build
-delete settings.devtool;
+module.exports = {
+    mode: 'production',
 
-// delete devServer
-delete settings.devServer;
+    entry: {
+        app: path.join(PATH_SOURCE, 'index.js'),
+    },
 
-// change output name to minified
-settings.output.filename = 'js/[name].min.js';
+    output: {
+        path: PATH_DIST,
+        filename: 'js/[name].min.js',
+        publicPath: '/',
+    },
 
-// rules
-settings.module.rules[0] = rules.scss.production;
+    optimization: {
+        minimizer: [
+            plugins.uglify,
+            plugins.cssoptimise,
+        ],
+    },
 
-// optimization
-settings.optimization = {
-    minimizer: [
-        plugins.uglify,
-        new OptimizeCSSAssetsPlugin({}),
+    module: {
+        rules: [
+            rules.scss.production,
+            rules.jsx,
+        ],
+    },
+
+    plugins: [
+        plugins.core,
+        plugins.clean,
+        plugins.html,
+        plugins.copy,
+        plugins.css,
     ],
 };
-
-// extract css
-settings.plugins.push(plugins.css);
-
-module.exports = settings;

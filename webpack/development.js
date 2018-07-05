@@ -27,6 +27,7 @@ module.exports = {
         contentBase: PATH_DIST,
         hot: true,
         historyApiFallback: true,
+        port: 8888,
     },
 
     module: {

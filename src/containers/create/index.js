@@ -5,6 +5,7 @@ import { SEARCH } from '../../constants';
 class Create extends PureComponent {
 
     render() {
+        console.log('SEARCH', SEARCH);
         return (
             <span>
                 <h1>Create</h1>

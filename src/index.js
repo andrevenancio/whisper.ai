@@ -16,7 +16,7 @@ const node = __NODE_ENV__;
 
 global.window.printVersion = () => {
     const args = [
-        `%cwhisper.ai \n%cversion: %c${version} \n%cnode: %c${node}`,
+        `%cwhispers.ai \n%cversion: %c${version} \n%cnode: %c${node}`,
         lib, parameters, values, parameters, values,
     ];
 

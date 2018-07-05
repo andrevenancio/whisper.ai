@@ -13,8 +13,13 @@ const SEARCH = (app) => {
             q: req.query.key,
             count: req.query.count || 5,
         };
-        const response = await twitter.get('users/search', options);
-        res.json(response);
+
+        try {
+            const response = await twitter.get('users/search', options);
+            res.json(response);
+        } catch (error) {
+            console.log('API ERROR', error);
+        }
     });
 
     app.use('/api/search', router);

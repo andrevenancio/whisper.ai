@@ -43,6 +43,6 @@ button {
 
     &:hover,
     &.active {
-        color: red; // $color-font-secondary;
+        color: $color-font-secondary;
     }
 }

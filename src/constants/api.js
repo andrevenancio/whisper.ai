@@ -1,1 +1,1 @@
-export const SEARCH = '//localhost:8081/api/search';
+export const SEARCH = '//0.0.0.0:8080/api/search';
