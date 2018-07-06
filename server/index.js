@@ -20,7 +20,7 @@ app.get('/api', (req, res) => {
 SEARCH(app);
 
 app.get('/andre', (req, res) => {
-    res.status(200).send(process.env.NODE_ENV);
+    res.status(200).send(JSON.stringify(process.env.NODE_ENV === 'production' ? '/' : '//0.0.0.0:8080'));
 });
 
 // all other routes
