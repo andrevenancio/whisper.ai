@@ -26,6 +26,6 @@ app.get('/andre', (req, res) => {
 app.use(express.static(PATH_DIST));
 app.get('*', (req, res) => {
     res.sendFile('index.html', {
-        root: PATH_DIST,
+        root: './build',
     });
 });
