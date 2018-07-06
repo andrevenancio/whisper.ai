@@ -26,6 +26,7 @@ app.get('/andre', (req, res) => {
 // all other routes
 app.use(express.static('./build'));
 app.get('*', (req, res) => {
+    console.log('log', req, res);
     res.sendFile('index.html', {
         root: path.join(process.cwd(), 'build'),
     });
