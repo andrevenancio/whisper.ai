@@ -28,8 +28,6 @@ app.get('/andre', (req, res) => {
 // all other routes
 app.use(express.static('./build'));
 app.get('*', (req, res) => {
-    console.log('log', req, res);
-
     console.log('amazing');
     fs.readdir(PATH_DIST, (err, files) => {
       files.forEach((file) => {
