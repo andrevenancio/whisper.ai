@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const { PATH_DIST } = require('../webpack/webpack.config');
@@ -23,9 +24,9 @@ app.get('/andre', (req, res) => {
 });
 
 // all other routes
-app.use(express.static(PATH_DIST));
+app.use(express.static('./build'));
 app.get('*', (req, res) => {
     res.sendFile('index.html', {
-        root: './build',
+        root: path.join(process.cwd(), 'build'),
     });
 });
