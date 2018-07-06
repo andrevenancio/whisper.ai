@@ -69,7 +69,7 @@ export class FieldSearchComponent extends PureComponent {
             this.setState({
                 show: false,
             });
-        }, 100);
+        }, 150);
         global.removeEventListener('keyup', this.handleKeyUp, false);
     }
 
@@ -91,6 +91,7 @@ export class FieldSearchComponent extends PureComponent {
             break;
         case 13:
             this.selectItem(highlight);
+            this.search.blur();
             return;
         default:
             break;
@@ -110,7 +111,6 @@ export class FieldSearchComponent extends PureComponent {
 
     selectItem = (index) => {
         this.search.value = `@${this.state.data[index].screen_name}`;
-        this.search.blur();
     }
 
     render() {
