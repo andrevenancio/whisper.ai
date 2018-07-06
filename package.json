@@ -9,10 +9,10 @@
         "node": "8.11.2"
     },
     "scripts": {
-        "heroku-postbuild": "export NODE_ENV=production&&npm run build",
+        "heroku-postbuild": "npm run build",
         "website:dev": "export NODE_ENV=development&&webpack-dev-server --config webpack/development.js --watch --open",
         "server:dev": "nodemon ./server/index.js -q",
-        "server:prd": "export NODE_ENV=production&&node ./server/index.js",
+        "server:prd": "node ./server/index.js",
         "build": "export NODE_ENV=production&&webpack --config webpack/production.js",
         "start": "concurrently --kill-others --names \"website,server\" -c \"black.bgWhite,black.bgWhite\" \"npm run website:dev\" \"npm run server:dev\"",
         "lint": "eslint src/**/*.js --quiet",

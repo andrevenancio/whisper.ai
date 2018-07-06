@@ -1,7 +1,7 @@
-const path = require('path');
+// const path = require('path');
 const express = require('express');
 const cors = require('cors');
-// const { PATH_DIST } = require('../webpack/webpack.config');
+const { PATH_DIST } = require('../webpack/webpack.config');
 const SEARCH = require('./api/search.js');
 
 const PORT = process.env.PORT || 8080;
@@ -19,14 +19,10 @@ app.get('/api', (req, res) => {
 
 SEARCH(app);
 
-app.get('/andre', (req, res) => {
-    res.status(200).send(JSON.stringify(process.env.NODE_ENV === 'production' ? '/' : '//0.0.0.0:8080'));
-});
-
 // all other routes
-app.use(express.static('./build'));
+app.use(express.static(PATH_DIST));
 app.get('*', (req, res) => {
     res.sendFile('index.html', {
-        root: path.join(process.cwd(), 'build'),
+        root: PATH_DIST, // path.join(process.cwd(), 'build'),
     });
 });
