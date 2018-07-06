@@ -4,6 +4,10 @@
     "description": "",
     "repository": "git@github.com:andrevenancio/whispers.ai.git",
     "license": "MIT",
+    "engines": {
+        "npm": "6.1.0",
+        "node": "8.11.2"
+    },
     "scripts": {
         "heroku-postbuild": "npm run build",
         "website:dev": "export NODE_ENV=development&&webpack-dev-server --config webpack/development.js --watch --open",
