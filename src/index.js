@@ -23,6 +23,8 @@ global.window.printVersion = () => {
     ];
 
     console.log(...args);
+
+    console.log(version, node, api);
 };
 
 setApiBaseUrl(api);
