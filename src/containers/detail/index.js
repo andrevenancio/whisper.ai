@@ -4,10 +4,10 @@ class Detail extends PureComponent {
 
     render() {
         return (
-            <span>
+            <div>
                 <h1>Detail</h1>
                 <p>detail of the tweet goes here</p>
-            </span>
+            </div>
         );
     }
 }

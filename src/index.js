@@ -14,6 +14,7 @@ const parameters = 'color:#777;font-size:x-small';
 const values = 'color:#f33;font-size:x-small';
 const version = __VERSION__;
 const node = __NODE_ENV__;
+const api = __API__;
 
 global.window.printVersion = () => {
     const args = [
@@ -24,12 +25,7 @@ global.window.printVersion = () => {
     console.log(...args);
 };
 
-setApiBaseUrl(__API__);
-
-if (node !== 'production') {
-    global.window.printVersion();
-}
-
+setApiBaseUrl(api);
 const store = config();
 
 render(
@@ -40,3 +36,7 @@ render(
 );
 
 store.dispatch(actionAppInit());
+
+if (node !== 'production') {
+    global.window.printVersion();
+}

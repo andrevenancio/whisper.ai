@@ -9,16 +9,12 @@ import {
     USER_UPDATE,
 } from './actions';
 import {
-    setPersistence,
     login,
     logout,
 } from '../../firebase/api';
 
 function* sagaUserLogin() {
     try {
-        const persistence = yield setPersistence();
-        console.log('persistence set', persistence);
-        // https://firebase.google.com/docs/auth/web/auth-state-persistence
         const response = yield login();
         console.log('login done');
         yield put({ type: USER_UPDATE, currentUser: response.user });

@@ -2,16 +2,22 @@
 
 .field-search {
     position: relative;
+    display: inline-block;
+    width: 250px;
 
     input {
-        padding: 4px 8px;
+        width: 100%;
+        padding: 6px 12px;
+        background-color: #212121;
+        border: 0;
+        color: $color-font-main;
 
         &:focus {
             outline: none;
         }
 
         &::placeholder {
-            color: $color-font-disabled;
+            color: $color-font-secondary;
         }
     }
 
@@ -22,17 +28,43 @@
         width: 100%;
         transform: translateY(100%);
 
-        &__person {
-            background-color: rgba(0, 0, 0, 0.5);
+        &__item {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 10px;
+            width: 100%;
+            height: 50px;
+            background-color: #111;
+
+            img {
+                width: 32px;
+            }
+
+            p {
+                padding-left: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover,
+            &.selected {
+                background-color: #333;
+
+                p {
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
 
-        img {
-            width: 40px;
-        }
-
-        img, p {
-            display: inline-block;
-            margin: 0;
-        }
     }
 }

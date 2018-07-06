@@ -5,13 +5,8 @@ export const init = (config) => {
     provider = new firebase.auth.TwitterAuthProvider();
 };
 
-export const setPersistence = async () => {
-    return firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-};
-
 export const login = async () => {
     const response = await firebase.auth().signInWithPopup(provider);
-    console.log('login', response);
     return response;
 };
 
