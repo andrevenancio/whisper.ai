@@ -18,6 +18,10 @@ app.get('/api', (req, res) => {
 
 SEARCH(app);
 
+app.get('/andre', (req, res) => {
+    res.status(200).send(PATH_DIST);
+});
+
 // all other routes
 app.use(express.static(PATH_DIST));
 app.get('*', (req, res) => {
