@@ -20,7 +20,7 @@ app.get('/api', (req, res) => {
 SEARCH(app);
 
 app.get('/andre', (req, res) => {
-    res.status(200).send(path.join(process.cwd(), 'build'));
+    res.status(200).send(process.env.NODE_ENV);
 });
 
 // all other routes

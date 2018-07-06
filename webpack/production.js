@@ -1,7 +1,6 @@
 const path = require('path');
 const plugins = require('./plugins');
 const rules = require('./rules');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const {
     PATH_DIST,
