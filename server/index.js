@@ -1,10 +1,8 @@
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
-const { PATH_DIST } = require('../webpack/webpack.config');
+// const { PATH_DIST } = require('../webpack/webpack.config');
 const SEARCH = require('./api/search.js');
-
-const fs = require('fs');
 
 const PORT = process.env.PORT || 8080;
 
@@ -22,18 +20,12 @@ app.get('/api', (req, res) => {
 SEARCH(app);
 
 app.get('/andre', (req, res) => {
-    res.status(200).send(PATH_DIST);
+    res.status(200).send(path.join(process.cwd(), 'build'));
 });
 
 // all other routes
 app.use(express.static('./build'));
 app.get('*', (req, res) => {
-    console.log('amazing');
-    fs.readdir(PATH_DIST, (err, files) => {
-      files.forEach((file) => {
-        console.log(file);
-      });
-  });
     res.sendFile('index.html', {
         root: path.join(process.cwd(), 'build'),
     });

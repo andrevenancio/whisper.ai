@@ -1,5 +1,5 @@
 {
   "clean_urls": true,
-  "https_only": false,
-  "root": "build/"
+  "https_only": true,
+  "root": "./build"
 }
