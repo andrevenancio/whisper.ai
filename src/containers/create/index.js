@@ -5,13 +5,12 @@ import { SEARCH } from '../../constants';
 class Create extends PureComponent {
 
     render() {
-        console.log(SEARCH());
         return (
             <div>
                 <h1>Create</h1>
                 <p>create your tweet here</p>
                 <FieldSearchComponent
-                    api={SEARCH()}
+                    api={SEARCH}
                 />
             </div>
         );

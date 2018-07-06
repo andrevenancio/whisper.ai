@@ -1,7 +1,3 @@
-let base = '//0.0.0.0:8080/';
+const base = __API__;
 
-export const setApiBaseUrl = (endpoint) => {
-    base = endpoint;
-};
-
-export const SEARCH = () => `${base}api/search`;
+export const SEARCH = `${base}api/search`;

@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-import { setApiBaseUrl } from './constants';
 import config from './store/config';
 import { actionAppInit } from './store/app/actions';
 import Application from './app';
@@ -14,7 +13,6 @@ const parameters = 'color:#777;font-size:x-small';
 const values = 'color:#f33;font-size:x-small';
 const version = __VERSION__;
 const node = __NODE_ENV__;
-const api = __API__;
 
 global.window.printVersion = () => {
     const args = [
@@ -23,11 +21,8 @@ global.window.printVersion = () => {
     ];
 
     console.log(...args);
-
-    console.log(version, node, api);
 };
 
-setApiBaseUrl(api);
 const store = config();
 
 render(
